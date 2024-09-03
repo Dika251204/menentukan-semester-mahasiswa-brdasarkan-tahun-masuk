@@ -1,0 +1,18 @@
+hitung_semester(tahun_masuk):
+    # Mendapatkan tahun dan bulan saat ini
+    tahun_saat_ini = datetime.now().year
+    bulan_saat_ini = datetime.now().month
+    
+    # Menghitung selisih tahun
+    selisih_tahun = tahun_saat_ini - tahun_masuk
+    
+    # Menentukan semester berdasarkan bulan saat ini
+    if bulan_saat_ini <= 6:
+        semester = (selisih_tahun * 2) + 2
+    else:
+        semester = (selisih_tahun * 2) + 1
+    
+    return semester
+
+# Input tahun masuk
+tahun_masuk = int(input("Masukkan tahun masuk mahasiswa: "))
